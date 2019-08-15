@@ -1,0 +1,36 @@
+{
+    "name": "to-do",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack",
+        "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nri1234/Cofiguration-of-Webpack.git"
+    },
+    "author": "Norbert M",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nri1234/Cofiguration-of-Webpack/issues"
+    },
+    "homepage": "https://github.com/nri1234/Webpack-with-React.git",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^3.2.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "style-loader": "^1.0.0",
+        "webpack": "^4.39.2",
+        "webpack-cli": "^3.3.6"
+    },
+    "dependencies": {
+        "babel-loader": "^8.0.6",
+        "uuid": "^3.3.2"
+    }
+}
