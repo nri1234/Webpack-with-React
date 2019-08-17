@@ -1,0 +1,15 @@
+.TaskList{
+    background-color: #e6ffff;
+    color: #014c8c;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.Task {
+    color: black;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 52px;
+}
