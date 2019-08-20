@@ -1,15 +1,8 @@
-.TaskList{
-    background-color: #e6ffff;
-    color: #014c8c;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.Task {
-    color: black;
-    border-radius: 3px;
-    border: 1px solid black;
-    padding: 52px;
+ul {
+    padding: 5px 20px;
+    list-style-type: none;
+    width: 340px;
+    height: auto;
+    max-width: 80vw;
+    border-radius: 5px;
 }

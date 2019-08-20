@@ -1,0 +1,29 @@
+form.TodoForm {
+    box-sizing: border-box;
+    background-color: ;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    width: 380px;
+    max-width: 80vw;
+}
+
+form.TodoForm input {
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 75%;
+    padding: 3px 5px;
+}
+
+form.TodoForm button {
+    margin-left: 10px;
+    padding: 3px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #3366cc;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    float: right;
+}

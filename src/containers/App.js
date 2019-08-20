@@ -3,10 +3,14 @@ import uuid from "uuid";
 import style from "./App.css";
 import Title from "../components/Title";
 import TodoList from "../components/TodoList";
+import TodoForm from "../components/TodoForm";
 import { hot } from "react-hot-loader";
+// ----------------- imports end ------------------------
+
 class App extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             data: [
                 {
@@ -19,7 +23,7 @@ class App extends React.Component {
                 },
                 {
                     id: 3,
-                    text: "learnig"
+                    text: "coding"
                 },
                 {
                     id: 4,
@@ -35,25 +39,26 @@ class App extends React.Component {
         };
         const data = [...this.state.data, todo];
         this.setState({ data });
-        //użycie zmiennej typu const, aby upewnić się, że zmienna nigdy nie będzie nadpisywana,
-        // operator spread na tablicy (this.state.data) i jednoczesne stworzenie nowej tablicy z dodatkowym elementem na końcu (todo). Ten zabieg to sprytna konstrukcja, pełniąca rolę metody push, ale działa bez modyfikowania stanu,
-        // korzystanie ze skróconego zapisu obiektu. Zamiast pisać { data: data }, zastosowaliśmy samo { data }. ES6 bez problemu zrozumie taką składnię i będzie wiedział, że tak naprawdę chodzi o { data: data }.
     }
-    removeTodo = id => {
+    removeTodo(id) {
         const remainder = this.state.data.filter(todo => todo.id !== id);
         this.setState({ data: remainder });
-    };
+    }
+
     render() {
         return (
             <div className={style.TodoApp}>
                 <Title
-                    title={"Number of tasks"}
-                    TodoList={this.state.data.length}
+                    title="Number of tasks"
+                    tasksNumber={this.state.data.length}
                 />
-                <TodoList data={this.state.data} removeTodo={this.removeTodo} />
+                <TodoForm addItem={this.addTodo.bind(this)} />
+                <TodoList
+                    data={this.state.data}
+                    remove={this.removeTodo.bind(this)}
+                />
             </div>
         );
     }
 }
-
 export default hot(module)(App);
