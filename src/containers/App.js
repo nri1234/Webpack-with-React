@@ -5,8 +5,6 @@ import Title from "../components/Title";
 import TodoList from "../components/TodoList";
 import TodoForm from "../components/TodoForm";
 import { hot } from "react-hot-loader";
-// ----------------- imports end ------------------------
-
 class App extends React.Component {
     constructor(props) {
         super(props);
