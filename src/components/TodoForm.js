@@ -4,7 +4,7 @@ import style from "./TodoForm.css";
 class TodoForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: " " };
+        this.state = { value: "" };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -14,13 +14,12 @@ class TodoForm extends React.Component {
     }
 
     handleSubmit(event) {
-        this.state.value;
         this.props.addItem(this.state.value);
-        this.state.value = "";
         event.preventDefault();
     }
 
     render() {
+        console.log("render...", this.state);
         return (
             <form className={style.TodoForm} onSubmit={this.handleSubmit}>
                 <input
