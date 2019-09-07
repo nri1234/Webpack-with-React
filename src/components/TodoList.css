@@ -1,0 +1,8 @@
+ul {
+    padding: 5px 20px;
+    list-style-type: none;
+    width: 340px;
+    height: auto;
+    max-width: 80vw;
+    border-radius: 5px;
+}
